@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Lucky One
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Visit My site](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
