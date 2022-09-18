@@ -6,7 +6,10 @@ const NavScroll = () => {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="./">
-          <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+          <FontAwesomeIcon
+            className="text-info"
+            icon={faHome}
+          ></FontAwesomeIcon>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -26,7 +29,7 @@ const NavScroll = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-primary">Search</Button>
+            <Button variant="outline-info">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

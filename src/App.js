@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       <NavScroll></NavScroll>
-      <div className="mt-3 text-center text-primary">
+      <div className="mt-3 text-center text-info">
         <h1>
           <img src={logo} className="App-logo" alt="" />
           Developer's Shop
