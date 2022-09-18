@@ -15,6 +15,11 @@ const Shop = () => {
   return (
     <Container fluid className="mt-5">
       <Row>
+        <Col className="cart bg-primary rounded text-center">
+          <div className="mt-5 text-white sticky-top">
+            <h3>Cart</h3>
+          </div>
+        </Col>
         <Col xs={8} className="mx-2">
           <Container>
             <Row>
@@ -23,11 +28,6 @@ const Shop = () => {
               ))}
             </Row>
           </Container>
-        </Col>
-        <Col className="cart bg-primary rounded text-center">
-          <div className="mt-5 text-white sticky-top">
-            <h3>Cart</h3>
-          </div>
         </Col>
       </Row>
     </Container>
