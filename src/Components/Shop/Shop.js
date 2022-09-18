@@ -14,7 +14,7 @@ const Shop = () => {
   }, []);
   return (
     <Container fluid className="mt-5">
-      <Row gap={3}>
+      <Row gap={1}>
         <Col xs={9}>
           <Container>
             <Row>
@@ -24,8 +24,10 @@ const Shop = () => {
             </Row>
           </Container>
         </Col>
-        <Col>
-          <h3>Cart</h3>
+        <Col className="cart bg-primary rounded text-center">
+          <div className="mt-5 text-white">
+            <h3>Cart</h3>
+          </div>
         </Col>
       </Row>
     </Container>

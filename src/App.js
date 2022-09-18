@@ -6,7 +6,10 @@ function App() {
   return (
     <div className="App">
       <NavScroll></NavScroll>
-      <h1 className="mt-3 text-center">Dev's Shop</h1>
+      <div className="mt-3 text-center text-primary">
+        <h1>Dev's Shop</h1>
+        <h6>Let the system choose and stay relaxed</h6>
+      </div>
       <Shop></Shop>
     </div>
   );

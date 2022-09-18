@@ -5,19 +5,17 @@ import './Product.css';
 const Product = (props) => {
   const { id, index, img, name } = props.product;
   return (
-    <Card style={{ width: '18rem' }} className="product">
+    <Card style={{ width: '21rem' }} className="product">
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
-          <p>
-            <small>SKU:{index}</small>
-          </p>
-          <p>
-            <small>PI:{id}</small>
-          </p>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          <small>
+            Product sku:{index} <br />
+            Product ID: {id} <br />
+          </small>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni nobis,
+          consectetur aliquid maiores excepturi omnis.
         </Card.Text>
       </Card.Body>
       <Card.Footer>
