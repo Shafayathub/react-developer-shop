@@ -10,7 +10,9 @@ const Product = (props) => {
     <Card style={{ width: '18rem' }} className="product ms-3 mb-3">
       <Card.Img variant="top" src={img} alt={name} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
+        <Card.Title>
+          <h4>{name}</h4>
+        </Card.Title>
         <Card.Text>
           <small>
             Product sku:{index} <br />
