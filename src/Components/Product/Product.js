@@ -5,7 +5,7 @@ import './Product.css';
 const Product = (props) => {
   const { id, index, img, name } = props.product;
   return (
-    <Card style={{ width: '21rem' }} className="product">
+    <Card style={{ width: '18rem' }} className="product mx-2 mb-2">
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
