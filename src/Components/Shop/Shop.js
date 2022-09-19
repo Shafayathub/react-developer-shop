@@ -22,8 +22,8 @@ const Shop = () => {
   return (
     <Container fluid className="mt-5">
       <Row>
-        <Col className="cart bg-info rounded text-center">
-          <div className="mt-5 text-white sticky-top">
+        <Col xs={4} className="cart bg-info rounded text-center">
+          <div className="mt-5 text-white sticky-top p-2">
             <h3>
               Cart <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
             </h3>
@@ -38,7 +38,7 @@ const Shop = () => {
             </Button>
           </div>
         </Col>
-        <Col xs={8} className="mx-2">
+        <Col xs={7} className="mx-2">
           <Container>
             <Row>
               {products.map((product) => (
