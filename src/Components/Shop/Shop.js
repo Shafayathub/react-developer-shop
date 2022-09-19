@@ -11,6 +11,7 @@ import {
   faCartShopping,
   faRefresh,
 } from '@fortawesome/free-solid-svg-icons';
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,15 @@ const Shop = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
+  // Using state to change the state of cart component
+  const [cart, setCart] = useState([]);
+  // Product page add to cart handler function
+  const addToCart = (product) => {
+    // Sharing onclicked product with cart component
+    const newCart = [...cart, product];
+    setCart(newCart);
+  };
   return (
     <Container fluid className="mt-5">
       <Row>
@@ -27,7 +37,7 @@ const Shop = () => {
             <h3>
               Cart <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
             </h3>
-            <div></div>
+            <Cart cart={cart}></Cart>
             <Button variant="dark text-white mb-2">
               Choose for the Boss{' '}
               <FontAwesomeIcon icon={faBoxOpen}></FontAwesomeIcon>
@@ -42,7 +52,11 @@ const Shop = () => {
           <Container>
             <Row>
               {products.map((product) => (
-                <Product key={product.id} product={product}></Product>
+                <Product
+                  key={product.id}
+                  product={product}
+                  addToCart={addToCart}
+                ></Product>
               ))}
             </Row>
           </Container>
