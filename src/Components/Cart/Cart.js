@@ -1,29 +1,20 @@
 import React from 'react';
 import Figure from 'react-bootstrap/Figure';
+import CartData from './CartData';
 const Cart = ({ cart }) => {
-  let addedProduct = cart;
+  const addedProduct = cart;
   console.log(addedProduct);
   if ((addedProduct.length > 0) & (addedProduct.length < 5)) {
-    for (const product of addedProduct) {
-      console.log(product);
-      return (
-        <Figure className="d-flex align-items-center justify-content-center m-1 p-2">
-          <Figure.Image
-            width={72}
-            height={72}
-            alt={product.name}
-            src={product.img}
-            roundedCircle
-          />
-          <Figure.Caption className="m-2 text-white">
-            {product.name}
-          </Figure.Caption>
-        </Figure>
-      );
-    }
+    return (
+      <div>
+        {addedProduct.map((product) => (
+          <CartData product={product} key={product.index}></CartData>
+        ))}
+      </div>
+    );
   } else {
     return (
-      <Figure className="d-flex align-items-center justify-content-center m-1 p-2">
+      <Figure className="d-flex align-items-center justify-content-center m-3">
         <Figure.Image
           width={72}
           height={72}
