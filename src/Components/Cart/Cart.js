@@ -4,10 +4,16 @@ import CartData from './CartData';
 const Cart = ({ cart }) => {
   const addedProduct = cart;
   console.log(addedProduct);
-  if ((addedProduct.length > 0) & (addedProduct.length < 5)) {
+  const onlyUnique = (value, index, self) => {
+    return self.indexOf(value) === index;
+  };
+  let unique = addedProduct.filter(onlyUnique);
+
+  console.log(unique);
+  if ((unique.length > 0) & (unique.length < 5)) {
     return (
       <div>
-        {addedProduct.map((product) => (
+        {unique.map((product) => (
           <CartData product={product} key={product.index}></CartData>
         ))}
       </div>
