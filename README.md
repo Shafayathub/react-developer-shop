@@ -4,4 +4,4 @@ This project was bootstrapped with [Visit My site](https://deluxe-kheer-fbdd21.n
 
 ### Live site link
 
-Click here: (https://deluxe-kheer-fbdd21.netlify.app)
+Click here: https://deluxe-kheer-fbdd21.netlify.app
