@@ -2,6 +2,6 @@
 
 This project was bootstrapped with [Visit My site](https://deluxe-kheer-fbdd21.netlify.app).
 
-### Code Splitting
+### Live site link
 
-This section has moved here: (https://deluxe-kheer-fbdd21.netlify.app)
+Click here: (https://deluxe-kheer-fbdd21.netlify.app)
