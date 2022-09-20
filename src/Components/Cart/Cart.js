@@ -5,13 +5,28 @@ import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxOpen, faRefresh } from '@fortawesome/free-solid-svg-icons';
 const Cart = ({ cart }) => {
-  const addedProduct = cart;
+  let addedProduct = cart;
+  // Uniquify data on product array
   const onlyUnique = (value, index, self) => {
     return self.indexOf(value) === index;
   };
   let unique = addedProduct.filter(onlyUnique);
   const choose = () => {
-    console.log(unique);
+    const selection = () => {
+      let randomize = Math.floor(Math.random() * 10);
+      if (randomize < unique.length) {
+        const chosenProduct = unique[[randomize]];
+
+        return alert(chosenProduct.name);
+        // return console.log(unique[randomize]);
+      } else {
+        selection();
+      }
+    };
+    selection();
+  };
+  const refresh = () => {
+    window.location.reload();
   };
   if ((unique.length > 0) & (unique.length < 5)) {
     return (
@@ -24,7 +39,7 @@ const Cart = ({ cart }) => {
           <FontAwesomeIcon icon={faBoxOpen}></FontAwesomeIcon>
         </Button>
         <br />
-        <Button variant="dark text-white">
+        <Button variant="dark text-white" onClick={refresh}>
           Pick Again <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
         </Button>
       </div>

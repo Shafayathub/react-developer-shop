@@ -22,7 +22,7 @@ const Shop = () => {
   // Product page add to cart handler function
   const addToCart = (product) => {
     // Sharing onclicked product with cart component
-    const newCart = [...cart, product];
+    let newCart = [...cart, product];
     setCart(newCart);
   };
 
@@ -34,7 +34,7 @@ const Shop = () => {
             <h3>
               Cart <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
             </h3>
-            <Cart cart={cart}></Cart>
+            <Cart cart={cart} addToCart={addToCart}></Cart>
           </div>
         </Col>
         <Col xs={7} className="mx-2">
