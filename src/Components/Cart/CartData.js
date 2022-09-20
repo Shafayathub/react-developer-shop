@@ -1,5 +1,7 @@
 import React from 'react';
-import Figure from 'react-bootstrap/Figure';
+import { Figure, Button } from 'react-bootstrap';
+import { faRemove } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const CartData = ({ product }) => {
   return (
     <div>
@@ -13,7 +15,10 @@ const CartData = ({ product }) => {
             roundedCircle
           />
           <Figure.Caption className="m-2 text-white">
-            {product.name}
+            {product.name}{' '}
+            <Button className="m-2">
+              <FontAwesomeIcon icon={faRemove}></FontAwesomeIcon>
+            </Button>
           </Figure.Caption>
         </Figure>
       }

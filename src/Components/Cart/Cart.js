@@ -18,7 +18,6 @@ const Cart = ({ cart }) => {
         const chosenProduct = unique[[randomize]];
 
         return alert(chosenProduct.name);
-        // return console.log(unique[randomize]);
       } else {
         selection();
       }
@@ -67,7 +66,7 @@ const Cart = ({ cart }) => {
           <FontAwesomeIcon icon={faBoxOpen}></FontAwesomeIcon>
         </Button>
         <br />
-        <Button variant="dark text-white">
+        <Button variant="dark text-white" onClick={refresh}>
           Pick Again <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
         </Button>
       </div>
