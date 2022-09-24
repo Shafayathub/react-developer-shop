@@ -45,8 +45,8 @@ const Cart = ({ cart }) => {
     );
   } else if (unique.length >= 5) {
     return (
-      <div className="alert alert-info" role="alert">
-        <h4 className="alert-heading">More Than 4 products!</h4>
+      <div className="alert alert-info p-2" role="alert">
+        <h4 className="alert-heading">More Than 4!</h4>
         <p>
           Aww yeah, you can choose only 4 products and system will say what to
           pick for you.
