@@ -1,6 +1,6 @@
 # Lucky One
 
-This project was bootstrapped with [Visit My site](https://deluxe-kheer-fbdd21.netlify.app).
+This project: [Visit My site](https://deluxe-kheer-fbdd21.netlify.app).
 
 ### Live site link
 

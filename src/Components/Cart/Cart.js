@@ -43,6 +43,24 @@ const Cart = ({ cart }) => {
         </Button>
       </div>
     );
+  } else if (unique.length >= 5) {
+    return (
+      <div className="alert alert-info" role="alert">
+        <h4 className="alert-heading">More Than 4 products!</h4>
+        <p>
+          Aww yeah, you can choose only 4 products and system will say what to
+          pick for you.
+        </p>
+        <hr />
+        <p className="mb-2">
+          Whenever you see this, you start over again by pressing pick again.
+          Thanks a lot.
+        </p>
+        <Button variant="dark text-white" onClick={refresh}>
+          Pick Again <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
+        </Button>
+      </div>
+    );
   } else {
     return (
       <div>
